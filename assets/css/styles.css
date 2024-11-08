@@ -1,0 +1,30 @@
+/* colores */
+:root {
+    --bs-pvPrimary: #5804A4;
+    --bs-pvSecondary: #101010;
+    --bs-pvBackground: #FFFFFF;
+    --bs-pvText: #505470;
+}
+
+:root {
+    --bs-pvPrimary-hover: #470383;
+    --bs-pvSecondary-hover: #1d1d1d;
+    --bs-pvBackground-hover: #FFFFFF;
+    --bs-pvText-hover: #505470;
+}
+/* boton extra */
+
+.btn-pvPrimary {
+    background-color: var(--bs-pvPrimary) !important;
+    color: white !important;
+}
+
+.btn-pvPrimary:hover {
+    background-color: var(--bs-pvPrimary-hover) !important;
+    color: white !important;
+}
+
+.toast-container {
+    z-index: 1056;
+}
+
