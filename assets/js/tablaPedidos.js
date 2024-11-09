@@ -184,7 +184,7 @@ $(document).ready(function() {
             "#": i,
             "acciones": `
             <div class="d-flex justify-content-center mb-1">
-                <button type="button" class="btn btn-success btn-sm me-1">
+                <button type="button" class="btn btn-success btn-sm me-1" data-bs-toggle="modal" data-bs-target="#enviarPedidoModal" onclick="cargarDatosModal('${datoBase.cliente}', '${datoBase.direccion}', '${datoBase.trans}')">
                     <i class="bi bi-taxi-front-fill"></i>
                 </button>
                 <button type="button" class="btn btn-danger btn-sm">
@@ -192,7 +192,7 @@ $(document).ready(function() {
                 </button>
             </div>
             <div class="text-center small">${datoBase.acciones}</div> <!-- Clase 'small' para texto más pequeño -->
-        `,
+            `,
             "servicio": datoBase.servicio,
             "cliente": datoBase.cliente + ' ' + i, // Modificar nombre cliente
             "direccion": datoBase.direccion,
@@ -256,6 +256,14 @@ $(document).ready(function() {
             return `<div style="background-color: #f8d7da; padding: 5px;">${data}</div>`;
         }
     }
+
+    function cargarDatosModal(cliente, direccion, trans) {
+        document.getElementById('clientName').value = cliente;
+        document.getElementById('clientAddress').value = direccion;
+        document.getElementById('clientSection').value = trans;
+        document.getElementById('clientPhone').value = ''; // Asigna un valor si tienes el dato disponible
+    }
+    
 
     // Actualizar los registros en intervalos de tiempo definidos (ejemplo: cada 30 segundos)
     setInterval(function() {
